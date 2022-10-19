@@ -7,6 +7,8 @@
 #include "wl_def.h"
 #pragma hdrstop
 
+int (oldviewsize);
+
 //
 // PRIVATE PROTOTYPES
 //
@@ -347,7 +349,9 @@ void US_ControlPanel(byte scancode)
 			#ifdef GOODTIMES
 			BossKey();
 			#else
+			oldviewsize = viewsize;
 			HelpScreens();
+			NewViewSize(oldviewsize);
 			#endif
 			#endif
 			goto finishup;
@@ -602,7 +606,9 @@ void DrawMainMenu(void)
 void CP_ReadThis(void)
 {
 	StartCPMusic(CORNER_MUS);
+	oldviewsize = viewsize;
 	HelpScreens();
+	NewViewSize(oldviewsize);
 	StartCPMusic(MENUSONG);
 }
 #endif
