@@ -1039,9 +1039,9 @@ void PlayDemo (int demonumber)
 // debug: load chunk
 #ifndef SPEARDEMO
 //	int dems[NUMDEMOS]={T_DEMO0,T_DEMO1,T_DEMO2,T_DEMO3,T_DEMO4};
-	int dems[4]={T_DEMO0,T_DEMO1,T_DEMO2,T_DEMO3};
+	int dems[NUMDEMOS]={T_DEMO0,T_DEMO1,T_DEMO2,T_DEMO3};
 #else
-	int dems[1]={T_DEMO0};
+	int dems[NUMDEMOS]={T_DEMO0};
 #endif
 
 	CA_CacheGrChunk(dems[demonumber]);
