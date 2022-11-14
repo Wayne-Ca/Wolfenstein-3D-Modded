@@ -92,7 +92,11 @@
 //#define NUMLATCHPICS	49
 
 //#define NUMDEMOS		(T_DEMO3 - T_DEMO0 + 1)	// added this to control how many demos exist
-#define NUMDEMOS		8
+#ifndef SPEARDEMO
+#define NUMDEMOS		4
+#else
+#define NUMDEMOS                1
+#endif
 
 #define PI				3.141592657
 
